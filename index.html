@@ -44,19 +44,19 @@
 
         
   <div class="image-card">
-    <img src="images/MexicanRoutes-Gastronomy-005.jpg" alt="Image 1">
-    <h2>Event 1</h2>
-    <p>Description of what was done in Image 1.</p>
+    <img src="images/lc3.jpg" alt="Image 1">
+    <h2> Father's Day (18/06/2023) </h2>
+    <p>The Linstead Community Development Committee (CDC) Father's Day event was a heartwarming celebration that honored and appreciated the fathers within our community. The atmosphere was filled with love, respect, and a genuine sense of gratitude for the important role that fathers play in our lives.</p>
   </div>
   
   <div class="image-card">
-    <img src="images/background1.png" alt="Image 2">
+    <img src="images/lc1.jpg" alt="Image 2">
     <h2>Event 2</h2>
     <p>Description of what was done in Image 2.</p>
   </div>
   
   <div class="image-card">
-    <img src="images/grow.PNG" alt="Image 3">
+    <img src="images/lc2.jpg" alt="Image 3">
     <h2>Event 3</h2>
     <p>Description of what was done in Image 3.</p>
   </div>
@@ -160,24 +160,62 @@
 
 <section id="buttons">
     <div class="button-container">
-    <button class="navigation-button" onclick="window.location.href = 'page1.html';">Go to Page 1 and see more</button>
-    <button class="navigation-button" onclick="window.location.href = 'page2.html';">Go to Page 2</button>
-    <button class="navigation-button" onclick="window.location.href = 'page3.html';">Go to Page 3</button>
-    <button class="navigation-button" onclick="window.location.href = 'page1.html';">Go to Page 1</button>
-    <button class="navigation-button" onclick="window.location.href = 'page2.html';">Linstead Ackee and Jerk Festival</button>
-    <button class="navigation-button" onclick="window.location.href = 'page3.html';">Go to Page 3</button>
-    <button class="navigation-button" onclick="window.location.href = 'page1.html';">Go to Page 1</button>
-    <button class="navigation-button" onclick="window.location.href = 'page2.html';">Go to Page 2</button>
-    <button class="navigation-button" onclick="window.location.href = 'page3.html';">Go to Page 3</button>
+                <button class="navigation-button" onclick="window.location.href = 'https://newperson10.github.io/LDAC-Register/';">Sign Up?</button>
+                <button class="navigation-button" onclick="window.location.href = 'https://newperson10.github.io/Awards-Ceremony/';">Awards Ceremony</button>
+                <button class="navigation-button" onclick="window.location.href = 'https://newperson10.github.io/Jerk-Festival/';">Linstead Ackee and Jerk Festival</button>
+                <button class="navigation-button" onclick="window.location.href = 'https://newperson10.github.io/LDAC-Concert/';">Our Powerful CDC's in Concert</button>
     </div>
 
-    <div class="socials"> 
-        <h5> STAY IN THE LOOP?</h5>
-        <button href="#"> <img src="images/facebook-app-symbol.png"> </button>
-        <button href="#"> <img src="images/instagram.png"> </button>
-        <button href="#"> <img src="images/share.png"> </button>
-    </div>
-    
+   <div class="socials"> 
+                    <h5> STAY IN THE LOOP?</h5>
+                    <button> <a href="https://www.facebook.com/linsteaddac"> <img src="images/facebook-app-symbol.png"> </a> </button>
+                    <button> <a href="https://instagram.com/linsteaddac?igshid=MzRlODBiNWFlZA=="> <img src="images/instagram.png"> </a> </button>
+                    <button> <img id="shareButton" src="images/share.png"> </button>
+                    <h4 id="backtotop" onclick="scrollToTop1();"><br><br>Back to top <br><br></h4>
+                    
+                    <script>
+                    function scrollToTop1() {
+                            window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                                  });
+                                }
+                    </script>
+                </div>
+                
+
+                <script>
+              document.getElementById("shareButton").addEventListener("click", function() {
+                var linkToShare = "https://newperson10.github.io/LDAC-Home/"; // Specify the link you want to share
+                var imageUrl = "https://github.com/NewPerson10/LDAC-Home/raw/main/images/photo-output%20(101).PNG"; // Example path to your image
+            
+                // Check if the Share API is supported by the browser
+                if (navigator.share) {
+                  navigator.share({
+                    title: "Check out this link",
+                    text: "LDAC. Bringing Communities Together.",
+                    url: linkToShare
+                  })
+                  .then(function() {
+                    console.log("Link shared successfully!");
+                  })
+                  .catch(function(error) {
+                    console.error("Error sharing link:", error);
+                  });
+                } else {
+                  // Fallback for platforms that do not support the Share API
+                  var whatsappLink = "https://api.whatsapp.com/send?text=" + encodeURIComponent(linkToShare + " " + imageUrl);
+                  var emailLink = "mailto:?subject=Check%20out%20this%20link&body=" + encodeURIComponent(linkToShare + " " + imageUrl);
+            
+                  // Open WhatsApp share dialog or compose email
+                  window.open(whatsappLink);
+                  window.open(emailLink);
+            
+                  console.log("Link shared through fallback options.");
+                }
+              });
+                          </script>
+                
 </section>
 </body>
 </html>
